@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Relativelayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/link"
+    android:background="@drawable/animation"
+    tools:context="amansoftdevelopers.com.asbrowser.MainActivity">
+
+    <TextView
+        android:id="@+id/WelcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="159dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/Welcome"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:typeface="sans" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:alpha="0.48"
+        app:backgroundTint="#000000"
+        android:src="@drawable/ic_action_nextactivity"
+            />
+
+    <EditText
+        android:id="@+id/link"
+        style="@android:style/Widget.Material.Light.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/fab"
+        android:layout_alignBaseline="@id/fab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/URLhint"
+        android:inputType="textUri"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="#ffffff"
+        android:textColorLink="#fff"
+        android:textSize="18sp"
+        android:typeface="normal"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WelcomeTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:src="@mipmap/logo_bg"
+        tools:ignore="ContentDescription"
+        android:alpha="0.7"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:fitsSystemWindows="true"
+        />
+</RelativeLayout>

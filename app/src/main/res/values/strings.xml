@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AS Browser</string>
+    <string name="Welcome">Welcome to AS Browser</string>
+    <string name="URLhint">Enter url</string>
+</resources>

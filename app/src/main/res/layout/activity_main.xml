@@ -26,14 +26,10 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSIbtn"
-        android:layout_width="150dp"
+        android:layout_width="130dp"
         android:layout_height="50dp"
-        android:layout_above="@+id/link"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp">
-    </com.google.android.gms.common.SignInButton>
+        android:layout_centerVertical="true"></com.google.android.gms.common.SignInButton>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -94,4 +90,17 @@
         android:layout_centerVertical="true"
         android:fitsSystemWindows="true"
         android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/PresstoC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="#fff"
+        android:text="@string/pressTOcontinue"
+        android:visibility="invisible"
+        />
 </RelativeLayout>

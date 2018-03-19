@@ -1,6 +1,8 @@
 package amansoftdevelopers.com.asbrowser
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -14,6 +16,7 @@ import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 .build()
         mGoogleSignInClient = GoogleSignIn.getClient(applicationContext, gso!!)
 
-        signinBtn!!.setOnClickListener { view: View? ->
+        signinBtn!!.setOnClickListener {
             signInGoogle()
         }
 
@@ -92,6 +95,8 @@ class MainActivity : AppCompatActivity() {
         return link.text.toString()
     }
 
+
+
     //FireBase Signing Functions
     private fun signInGoogle() {
         var signInIntent: Intent = mGoogleSignInClient!!.signInIntent
@@ -117,8 +122,13 @@ class MainActivity : AppCompatActivity() {
             {
               signinBtn!!.visibility=View.INVISIBLE
                 WelcomeText=findViewById(R.id.WelcomeTxt)
+                imageView.alpha=1.0F
                 WelcomeText!!.text= "Hello "+(account.displayName).toString()+" ! "
-                floatBtn!!.visibility=View.VISIBLE
+                Picasso.with(this)
+                        .load(account.photoUrl)
+                        .into(imageView)
                 link.visibility=View.VISIBLE
+                floatBtn!!.visibility=View.VISIBLE
+                PresstoC.visibility=View.VISIBLE
             }
         }

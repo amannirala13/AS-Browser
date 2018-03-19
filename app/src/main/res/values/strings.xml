@@ -3,4 +3,6 @@
     <string name="Welcome">Welcome to AS Browser</string>
     <string name="URLhint">Enter url</string>
     <string name="pressTOcontinue">Press to Continue</string>
+    <string name="SigninTOcontinue">Sign in to your Google Account</string>
+    <string name="Branding">Made with ❤ by AmanSoft Developers</string>
 </resources>

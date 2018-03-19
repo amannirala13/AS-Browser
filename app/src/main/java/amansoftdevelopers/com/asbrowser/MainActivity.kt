@@ -1,18 +1,18 @@
 package amansoftdevelopers.com.asbrowser
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.EditText
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import com.google.android.gms.auth.api.signin.*
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
@@ -20,6 +20,9 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
+
 
     private var relativeLayout: RelativeLayout? = null
     private var animationDrawable: AnimationDrawable? = null
@@ -29,9 +32,13 @@ class MainActivity : AppCompatActivity() {
     private var mGoogleSignInClient: GoogleSignInClient? = null
     private var RC_SIGN_IN: Int = 1
     private var WelcomeText:TextView?=null
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         //Signing
         signinBtn = findViewById(R.id.googleSIbtn)
         gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -55,9 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         // setting exit fade animation duration to 2 seconds
         animationDrawable!!.setExitFadeDuration(2000)
-        var toast: Toast = Toast.makeText(applicationContext, "Welcome\n Developer: Aman Nirala", Toast.LENGTH_LONG)
-        toast.setMargin(0F, 0F)
-        toast.show()
+       Toast.makeText(applicationContext, "💗 Welcome 💗", Toast.LENGTH_LONG).show()
 
         //OnCLick Listener of FloatButton
         floatBtn = findViewById(R.id.fab)
@@ -121,9 +126,11 @@ class MainActivity : AppCompatActivity() {
            private fun updateUI(account: GoogleSignInAccount)
             {
               signinBtn!!.visibility=View.INVISIBLE
+                sga.visibility=View.INVISIBLE
                 WelcomeText=findViewById(R.id.WelcomeTxt)
                 imageView.alpha=1.0F
-                WelcomeText!!.text= "Hello "+(account.displayName).toString()+" ! "
+                WelcomeText!!.text= "Hi"+(account.displayName).toString()+" !! "
+                Toast.makeText(applicationContext,"✔ Signin as: "+account.email,Toast.LENGTH_LONG).show()
                 Picasso.with(this)
                         .load(account.photoUrl)
                         .into(imageView)

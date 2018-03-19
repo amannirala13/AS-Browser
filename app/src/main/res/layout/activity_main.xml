@@ -103,4 +103,31 @@
         android:text="@string/pressTOcontinue"
         android:visibility="invisible"
         />
+
+    <TextView
+        android:id="@+id/sga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/googleSIbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/SigninTOcontinue"
+        android:textAlignment="center"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_below="@+id/googleSIbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fitsSystemWindows="true"
+        android:text="@string/Branding"
+        android:textColor="#fff"
+        android:textSize="16sp" />
 </RelativeLayout>

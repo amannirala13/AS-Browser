@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     private var relativeLayout: RelativeLayout? = null
     private var animationDrawable: AnimationDrawable? = null
     private var floatBtn: FloatingActionButton? = null
-    private var Link:EditText?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         // setting exit fade animation duration to 2 seconds
         animationDrawable!!.setExitFadeDuration(2000)
       var toast: Toast=Toast.makeText(applicationContext,"Welcome\n Developer: Aman Nirala", Toast.LENGTH_LONG)
-        toast.setMargin(50F,50F)
+        toast.setMargin(0F,0F)
         toast.show()
 
         //OnCLick Listener of FloatButton

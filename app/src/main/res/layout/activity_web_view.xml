@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="amansoftdevelopers.com.asbrowser.web_view">
-
+<FrameLayout
+    android:id="@+id/frameid"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:layout_gravity="top"
+    android:fitsSystemWindows="true"
+    android:visibility="invisible"
+    >
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="-3dp"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
+</FrameLayout>
     <WebView
         android:id="@+id/wv"
+        android:layout_gravity="fill_vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
-</RelativeLayout>
+        >
+
+
+    </WebView>
+</LinearLayout>
